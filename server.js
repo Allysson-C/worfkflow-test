@@ -4,12 +4,17 @@ const path = require('path');
 
 const app = express();
 
-// Serve only the static files form the dist directory
-// Replace the '/dist/<to_your_project_name>'
-app.use(express.static(__dirname + '/dist/'));
+var distDir = __dirname + '/dist/';
+app.use(express.static(distDir));
 
-app.get('*', function(req,res) {
-  // Replace the '/dist/<to_your_project_name>/index.html'
+// serve angular front end files from root path
+router.use('/', express.static('app', { redirect: false }));
+// rewrite virtual urls to angular app to enable refreshing of internal pages
+router.get('*', function(req, res, next) {
+  res.sendFile(path.resolve('dist/index.html'));
+});
+// Send all requests to index.html
+app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 // Start the app by listening on the default Heroku port

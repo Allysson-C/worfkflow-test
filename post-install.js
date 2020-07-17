@@ -4,7 +4,7 @@ let command;
 
 switch (process.env.ENVIRONMENT) {
   case 'develop':
-    command = exec('ng build --aot');
+    command = exec('ng build --aot --output-path dist');
     break;
   case 'deploy':
     command = exec('ng build --aot --configuration=deploy --output-path dist');
@@ -14,7 +14,7 @@ switch (process.env.ENVIRONMENT) {
     break;
 
   default:
-    command = exec('ng build --aot --configuration=develop');
+    command = exec('ng build --aot --configuration=develop --output-path dist');
     break;
 }
 
