@@ -1,6 +1,6 @@
-import { exec, ChildProcess } from 'child_process';
+const exec = require('child_process');
 
-let command: ChildProcess;
+let command;
 
 switch (process.env.ENVIRONMENT) {
   case 'develop':
