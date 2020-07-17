@@ -8,7 +8,10 @@ switch (process.env.ENVIRONMENT) {
     command = exec('ng build --aot --output-path dist');
     break;
   case 'deploy':
+<<<<<<< HEAD
     console.log('entrou')
+=======
+>>>>>>> deploy
     console.log(process.env.ENVIRONMENT);
     command = exec('ng build --aot --configuration=deploy --output-path dist');
     break;
@@ -19,7 +22,11 @@ switch (process.env.ENVIRONMENT) {
 
   default:
     console.log(process.env.ENVIRONMENT);
+<<<<<<< HEAD
     command = exec('ng build --aot  --output-path dist');
+=======
+    command = exec('ng build --aot --configuration=develop --output-path dist');
+>>>>>>> deploy
     break;
 }
 
