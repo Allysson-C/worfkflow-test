@@ -16,7 +16,7 @@ router.get('*', function(req, res, next) {
 });
 // Send all requests to index.html
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/workflow-test¬index.html'));
+  res.sendFile(path.join(__dirname + '/dist/workflow-test/index.html'));
 });
 
 const port = process.env.PORT || 5000;
