@@ -31,5 +31,7 @@ if (command !== undefined) {
         console.log(`child process exited with code ${code}`);
     });
 } else {
+
     console.error('process.env.ENV: ' + process.env.ENV);
+
 }
