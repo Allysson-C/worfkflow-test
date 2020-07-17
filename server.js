@@ -4,7 +4,7 @@ const app = express();
 var router = express.Router();
 
 
-var distDir = __dirname + '/dist/';
+var distDir = __dirname + '/dist/workflow-test';
 app.use(express.static(distDir));
 
 // serve angular front end files from root path
