@@ -19,11 +19,7 @@ switch (process.env.ENVIRONMENT) {
 
   default:
     console.log(process.env.ENVIRONMENT);
-<<<<<<< HEAD
     command = exec('ng build --aot  --output-path dist');
-=======
-    command = exec('ng build --aot --configuration=develop --output-path dist');
->>>>>>> deploy
     break;
 }
 
