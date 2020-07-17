@@ -8,10 +8,7 @@ switch (process.env.ENVIRONMENT) {
     command = exec('ng build --aot --output-path dist');
     break;
   case 'deploy':
-<<<<<<< HEAD
     console.log('entrou')
-=======
->>>>>>> deploy
     console.log(process.env.ENVIRONMENT);
     command = exec('ng build --aot --configuration=deploy --output-path dist');
     break;
