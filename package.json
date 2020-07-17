@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "node src/config/post-install.ts"
+    "postinstall": "node post-install.ts"
   },
   "private": true,
   "dependencies": {
